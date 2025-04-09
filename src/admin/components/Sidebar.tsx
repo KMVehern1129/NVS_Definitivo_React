@@ -2,7 +2,7 @@ import '../../css/admin/stylesadmin.css'
 import settingImage from '../img-admin/setting.png'
 import settingImage1 from '../img-admin/logoNVS.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBox , faUsers , faMoneyBill1Wave , faStar , faCommentDots , faPaperPlane , faCogs } from '@fortawesome/free-solid-svg-icons';
+import { faBox , faUsers , faMoneyBill1Wave , faCommentDots , faPaperPlane , faCogs } from '@fortawesome/free-solid-svg-icons';
 
 const Sidebar = () => {
     return (
@@ -50,14 +50,8 @@ const Sidebar = () => {
                                     <a href="../productos/anadir_productos.php">
                                         <li>Modificar Videojuegos</li>
                                     </a>
-                                    <a href="../productos/mod_desarrollador.php">
-                                        <li>Modificar Desarrollador</li>
-                                    </a>
                                     <a href="../productos/mod_marca.php">
                                         <li>Modificar Marca</li>
-                                    </a>
-                                    <a href="../productos/mod_lenguaje.php">
-                                        <li>Modificar Lenguaje</li>
                                     </a>
                                     <a href="../productos/mod_genero.php"> 
                                         <li>Modificar Genero</li>
@@ -76,21 +70,6 @@ const Sidebar = () => {
                                     </a>
                                     <a href="../htmlFor/indexhtmlFor.php">
                                         <li>htmlFor Pago</li>
-                                    </a>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <label htmlFor="puntos">
-                                    <FontAwesomeIcon icon={faStar} className='icon' /> Puntos
-                                </label>
-                                <input type="checkbox" id="puntos"/>
-                                <ul>
-                                    <a href="../puntos_cliente/historial-puntos.php">
-                                       <li>Historial de Puntos</li>
-                                    </a>
-                                    <a href="../puntos_cliente/mod_puntoscli.php">
-                                       <li>Puntos Clientes</li>
                                     </a>
                                 </ul>
                             </li>

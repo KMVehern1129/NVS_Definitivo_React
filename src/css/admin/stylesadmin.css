@@ -36,7 +36,7 @@
 }
 
 .sidebar::-webkit-scrollbar-thumb {
-    background-color: #4919b9;
+    background-color: #4919b9 !important;
 
 }
 
@@ -45,7 +45,7 @@
   }
 
 .table-responsive::-webkit-scrollbar-thumb {
-    background-color: #4919b9;
+    background-color: #4919b9 !important;
 
   }
 

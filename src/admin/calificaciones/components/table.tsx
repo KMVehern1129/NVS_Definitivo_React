@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
-import { ApiGet } from '../../hooks/UseAxios.tsx';
+import { ApiGet } from '../../../hooks/UseAxios.tsx';
 import Swal from 'sweetalert2';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash, faPen} from '@fortawesome/free-solid-svg-icons';
+
 
 const Table = () => {
 
@@ -20,12 +23,12 @@ const Table = () => {
     const getCalifications = async () => {
       try {
 
-        const result = await ApiGet<Calificacion[]>(endpoint);
+        const result = await ApiGet(endpoint);
         
-        if (result && result.data) {
+        if (result) {
             setData(result.data);
         } else {
-            console.error('No data received or data is in an unexpected format');
+            console.error('No se recibieron datos o los datos están en un formato inesperado');
         }
         setLoading(false);
       } catch (error) {
@@ -59,9 +62,9 @@ const Table = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {data.map((calificacion,id) =>(
-                        <tr> {calificacion.idCliente}
-                            <td>{(id+1)}</td>
+                    {data.map((calificacion) =>(
+                        <tr key={`${calificacion.idCliente}-${calificacion.idProducto}`}>
+                            <td>{calificacion.idCliente}</td>
                             <td>{calificacion.idProducto}</td>
                             <td>{calificacion.numeroCalificacion}</td>
                             <td>{calificacion.comentarioCalificacion}</td>
@@ -69,10 +72,10 @@ const Table = () => {
                             <td>
                                 <button type="button"
                                     className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-id="<?= $row['idProducto']?>">
-                                    <i className="fa-solid fa-pen"></i>
+                                    <FontAwesomeIcon icon={faPen} className='icon' />
                                 </button>
                             </td>
-                            <td><button className="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-id="<?= $row['idProducto']?>"><i className="fa-solid fa-trash"></i></button></td>
+                            <td><button className="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-id="<?= $row['idProducto']?>"><FontAwesomeIcon icon={faTrash} className='icon' /></button></td>
                         </tr>))}
                         
                 </tbody>

@@ -1,6 +1,8 @@
 import '../src/css/admin/stylesadmin.css'
 import Sidebar from './admin/components/Sidebar'
-import Table from './admin/components/table'
+import Table from './admin/calificaciones/components/table'
+import Filter from './admin/calificaciones/components/filter';
+
 
 function App() {
 
@@ -8,7 +10,11 @@ function App() {
 
     <div className="container1">
       <Sidebar/>
-      <Table/>
+      <div className="main-content1">
+        <Filter/>
+        <Table/>
+      </div>
+      
 
     </div>
   )

@@ -6,7 +6,6 @@ const Base_Url = import.meta.env.VITE_URL_API
 
 export const ApiGet = async (endpoint:String) => {
         const response = await axios.get(`${Base_Url}${endpoint}`);
-        console.log("hola")
             if (response.status >= 201) {
                 Swal.fire({
                     icon: "error",
@@ -14,7 +13,7 @@ export const ApiGet = async (endpoint:String) => {
                     text: "No hay calificacion",
                 });
             }    
-    return response.data;
+    return response;
 };
 
 export const ApiPost = async (endpoint:string, data:any) => {
