@@ -1,4 +1,4 @@
-const filter = () => {
+const Filter = () => {
     return(
         <div className="filter">
                 <input type="text" placeholder="ID Cliente"/>
@@ -9,4 +9,4 @@ const filter = () => {
     )
 }
 
-export default filter
+export default Filter

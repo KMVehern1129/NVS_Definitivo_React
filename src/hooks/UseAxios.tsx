@@ -51,13 +51,11 @@ export const ApiPut = async (endpoint:String, data:any) => {
 };
 
 export const ApiDelete = async (endpoint:string, data:any) => {
-    const response = await axios.put(`${Base_Url}${endpoint}`, data);
+    const response = await axios.delete(`${Base_Url}${endpoint}`, {
+        data: data,
+      });
     if (response.status == 200) {
-        Swal.fire({
-            icon: "success",
-            title: "Acción exitosa",
-            text: "Calificacion modificada",
-        });
+        return true;
     } else {
         Swal.fire({
             icon: "error",

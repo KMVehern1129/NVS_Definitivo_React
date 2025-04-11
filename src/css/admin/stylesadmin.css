@@ -285,18 +285,31 @@ a {
 }
 
 .modal:target {
-    display: block;
+    display: block !important;
 }
 
+.modal-backdrop {
+    position: fixed ;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
 
 .modal-content {
-    background-color: #3B1586;
-    margin: 15% auto;
-    padding: 20px;
-    width: 80%;
-    max-width: 500px;
-    border-radius: 10px;
-    position: relative;
+    background-color: #ffffff !important;
+    margin: 15% auto !important;
+    padding: 20px !important;
+    width: 80% !important;
+    max-width: 500px !important;
+    border-radius: 10px !important;
+    position: relative !important;
+    color: #000000;
 }
 
 .modal-content label {
@@ -308,7 +321,7 @@ a {
     border-radius: 20px;
     border: none !important;
     outline: none !important;
-    width: 150px;
+    width: 150px ;
     text-align: center;
     background-color: #707070 !important;
     color: #ffffff !important;
@@ -330,7 +343,7 @@ color: rgb(194, 194, 194) !important;
     position: absolute;
     top: 10px;
     right: 20px;
-    color: #aaaaaa49;
+    color: #aaaaaa49 !important;
     font-size: 28px;
     font-weight: bold;
     text-decoration: none;
