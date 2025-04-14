@@ -34,8 +34,9 @@ const Table = () => {
 
   };
 
-  useEffect(() => {
-    const getCalifications = async () => {
+  
+
+const getCalifications = async () => {
       try {
 
         const result = await ApiGet(endpoint);
@@ -56,6 +57,8 @@ const Table = () => {
         });
       }
     };
+
+    useEffect(() => {
     getCalifications();
   }, []);
 
@@ -81,6 +84,7 @@ const Table = () => {
     const response = await ApiDelete(endpoint, PK)
     if (response) {
       Swal.fire('Eliminado', 'La calificación ha sido eliminada.', 'success');
+      getCalifications();
     } else {
       Swal.fire({
         icon: "error",
@@ -89,7 +93,7 @@ const Table = () => {
       });
     }
   }
-
+  
   return (
     <div className="table-responsive">
       <table className="table table-striped table-dark">
@@ -139,6 +143,7 @@ const Table = () => {
                       onClose={cerrarModal}
                       isOpen={isOpen}
                       modal={idSeleccionado.modal}
+                      get={getCalifications}
                     />
                   )}
               </td>
@@ -178,6 +183,7 @@ const Table = () => {
             onClose={cerrarModal}
             isOpen={isOpen}
             modal={idSeleccionado.modal}
+            get={getCalifications}
           />
         )}
       </section>
