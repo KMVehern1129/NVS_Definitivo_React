@@ -1,23 +1,18 @@
-import '../src/css/admin/stylesadmin.css'
-import Sidebar from './admin/components/Sidebar'
-import Table from './admin/calificaciones/components/table'
-import Filter from './admin/calificaciones/components/filter';
-
+import Nav from './Controlador_Usuario B/components/Vista_Usuario_Correo/components/Nav';
+import Section from './Controlador_Usuario B/components/Vista_Usuario_Correo/components/Section';
+import Article from './Controlador_Usuario B/components/Vista_Usuario_Correo/components/Article';
+import Form from './Controlador_Usuario B/components/Vista_Usuario_Correo/components/Form';
+import './Css-Usuarios/styles.css'
 
 function App() {
-
   return (
-
-    <div className="container1">
-      <Sidebar/>
-      <div className="main-content1">
-        <Filter/>
-        <Table/>
-      </div>
-      
-
+    <div>
+      <Nav />
+      <Section />
+      <Article />
+      <Form />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
