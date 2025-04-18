@@ -4,7 +4,7 @@ const Form = () => (
         <form id="Formulario" method="post" action="Index_Vista_Usuario_Correo.html">
             <input type="email" id="e-mail" name="e-mail" placeholder="  Nuevo e-mail" required />
 
-            <input type="email" id="e-mail" name="e-mail" placeholder="  Confirma tu nuevo e-mail" required />
+            <input type="email" id="e-mailn" name="e-mailn" placeholder="  Confirma tu nuevo e-mail" required />
 
             <input type="password" id="password" name="password" placeholder="  Contraseña" required />
 

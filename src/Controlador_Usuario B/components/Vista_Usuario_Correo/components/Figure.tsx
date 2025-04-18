@@ -1,8 +1,9 @@
+
 const Figure = () => (
     <header className="header-main">
       <figure>
         <div className="Imagen_Usuario">
-          <img src="../Usu.png" alt="Logo Usuario" />
+          <img src="../../../assets/Usu.png" alt="Logo Usuario" />
         </div>
         <section>
           <div className="Datos_Conjuntos_Img_Usuario">

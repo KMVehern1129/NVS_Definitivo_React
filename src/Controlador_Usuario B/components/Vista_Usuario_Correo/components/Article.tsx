@@ -1,10 +1,11 @@
-const Article = () => (
+const Article = () => {
+  return(
     <article className="Centro">
       <div className="Text_Center">
         <h2><b>Seguridad De Cuenta</b></h2>
         <p>Mojanroja03@gmail.com</p>
       </div>
-      <button id="Abrir_Pop_Up"><img src="../Mensaje.png" alt="" /></button>
+      <button id="Abrir_Pop_Up"><img src="../../../assets/Mensaje.png" alt="" /></button>
       <div className="popup" id="popup">
         <div className="popup-contenido">
           <section id="One">
@@ -34,7 +35,8 @@ const Article = () => (
         </div>
       </div>
     </article>
-);
+)
+};
   
 export default Article;
   
