@@ -6,12 +6,8 @@ const Base_Url = import.meta.env.VITE_URL_API
 
 export const ApiGet = async (endpoint: String) => {
     const response = await axios.get(`${Base_Url}${endpoint}`);
-    if (response.status >= 201) {
-        Swal.fire({
-            icon: "error",
-            title: "Acción fallida",
-            text: "No hay calificacion",
-        });
+    if (response.status == 201 || response.status == 200 ) {
+        
     }
     return response;
 };

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ApiGet, ApiPost, ApiPut } from '../../../hooks/UseAxios.tsx';
+import { ApiGet, ApiPost, ApiPut } from '@hooks/UseAxios.tsx';
 import Swal from "sweetalert2";
 
 interface MyModalProps {

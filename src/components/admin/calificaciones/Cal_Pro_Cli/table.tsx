@@ -1,10 +1,12 @@
+//hooks
 import { useEffect, useState } from "react";
-import { ApiGet, ApiDelete } from '../../../hooks/UseAxios.tsx';
+import { ApiGet, ApiDelete } from '@hooks/UseAxios.tsx';
+//librerias
 import Swal from 'sweetalert2';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash, faPen, faPlus } from '@fortawesome/free-solid-svg-icons';
-import ExampleModal from "../components/modalUsuario.tsx";
-
+//Components
+import ExampleModal from "./modalUsuario.tsx";
 
 const Table = () => {
 
@@ -34,31 +36,29 @@ const Table = () => {
 
   };
 
-  
+  const getCalifications = async () => {
+    try {
 
-const getCalifications = async () => {
-      try {
+      const result = await ApiGet(endpoint);
 
-        const result = await ApiGet(endpoint);
-
-        if (result) {
-          setData(result.data);
-        } else {
-          console.error('No se recibieron datos o los datos están en un formato inesperado');
-        }
-        setLoading(false);
-      } catch (error) {
-        setError('Error fetching data');
-        setLoading(false);
-        Swal.fire({
-          icon: 'error',
-          title: 'Error',
-          text: 'No se pudo obtener la información',
-        });
+      if (result) {
+        setData(result.data);
+      } else {
+        console.error('No se recibieron datos o los datos están en un formato inesperado');
       }
-    };
+      setLoading(false);
+    } catch (error) {
+      setError('Error fetching data');
+      setLoading(false);
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'No se pudo obtener la información',
+      });
+    }
+  };
 
-    useEffect(() => {
+  useEffect(() => {
     getCalifications();
   }, []);
 
@@ -93,7 +93,7 @@ const getCalifications = async () => {
       });
     }
   }
-  
+
   return (
     <div className="table-responsive">
       <table className="table table-striped table-dark">

@@ -1,18 +1,14 @@
-import Nav from './components/nav';
-import Section from './Controlador_Usuario B/components/Vista_Usuario_Correo/components/Section';
-import Article from './Controlador_Usuario B/components/Vista_Usuario_Correo/components/Article';
-import Form from './Controlador_Usuario B/components/Vista_Usuario_Correo/components/Form';
-import './css/Css-Usuarios/styles.css'
-import './css/principal/index.css'
+import { Routes, Route } from "react-router-dom"
+import Calificacion_Cli_Pro from "@pages/Calificacion_prod_cli";
+import Inicio from "@pages/Inicio";
 
 function App() {
   return (
-    <div className="Container_Principal">
-      <Nav />
-      <Section />
-      <Article />
-      <Form />
-    </div>
+    <Routes>
+      <Route path="/" element={<Inicio/>} />
+      <Route path="/calificacion" element={<Calificacion_Cli_Pro/>} />
+      
+    </Routes>
   );
 }
 

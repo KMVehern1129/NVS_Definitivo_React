@@ -1,6 +1,9 @@
-import '../../css/admin/stylesadmin.css'
-import settingImage from '../img-admin/setting.png'
-import settingImage1 from '../../assets/imgs/logoNVS.svg'
+//css
+import '@css/admin/stylesadmin.css'
+//assets
+import settingImage from '@assets/imgs/admin/setting.png'
+import settingImage1 from '@assets/imgs/logoNVS.svg'
+//librerias
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBox , faUsers , faMoneyBill1Wave , faCommentDots , faPaperPlane , faCogs } from '@fortawesome/free-solid-svg-icons';
 
