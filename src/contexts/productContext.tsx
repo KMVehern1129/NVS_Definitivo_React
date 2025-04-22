@@ -46,7 +46,7 @@ export const ApiProvider = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export const apiContextProduct = () => {
+export const useApiContextProduct = () => {
   const context = useContext(ApiContext);
   if (!context) throw new Error('useApi debe usarse dentro de ApiProvider');
   return context;

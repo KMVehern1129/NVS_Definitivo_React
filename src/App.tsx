@@ -22,7 +22,6 @@ function App() {
   return (
   <ApiProvider>
     <Routes>
-      
         <Route path="/" element={<Nav />}>
           <Route path="/Inicio" element={<Principal />} />
           <Route path="/TiendaVideojuegos" element={<Tienda_Videojuegos />} />
@@ -31,7 +30,6 @@ function App() {
           <Route path="/TiendaPlayStation" element={<Tienda_Play />} />
           <Route path="/TiendaXbox" element={<Tienda_Xbox />} />
         </Route>
-      
       <Route path="/Administrador/Calificaciones/" element={<Calificacion_Cli_Pro />}></Route>
       <Route path="*" element={<h1>Not found</h1>} />
     </Routes>

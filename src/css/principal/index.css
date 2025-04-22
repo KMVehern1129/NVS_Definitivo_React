@@ -536,6 +536,7 @@ nav .container_nav_button a {
     background-color:#0c0220 ;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .footerP .container-footer {

@@ -5,7 +5,7 @@ import Tienda_Inicio from "@pages/tiendaInicio";
 import { useState, useEffect } from "react";
 
 //contexts
-import { apiContextProduct, Producto } from "@contexts/productContext";
+import { useApiContextProduct, Producto } from "@contexts/productContext";
 
 //css
 import '@css/principal/index.css';
@@ -21,7 +21,7 @@ import imgNinRight from '@assets/imgs/imgninRight.png'
 
 const Principal = () => {
 
-  const { responseFilter } = apiContextProduct();
+  const { responseFilter } = useApiContextProduct();
   const [Xbox, setXbox] = useState<Producto | null>(null);
   const [Nintendo, setNin] = useState<Producto | null>(null);
   const [Play, setPlay] = useState<Producto | null>(null);

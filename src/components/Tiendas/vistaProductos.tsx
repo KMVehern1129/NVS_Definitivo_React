@@ -1,5 +1,5 @@
 //contexts
-import { apiContextProduct, Producto } from '@contexts/productContext';
+import { useApiContextProduct, Producto } from '@contexts/productContext';
 
 //components
 import Ofertas from './ofertas';
@@ -26,7 +26,7 @@ type AuxMarca = {
 const Vista_Productos = ({ tienda }: Props) => {
 
     const endpoint: string = '/Productos/AuxMarca.php';
-    const { responseFilter } = apiContextProduct();
+    const { responseFilter } = useApiContextProduct();
     const [response, setResponse] = useState<Producto[]>([]);
     const [responseAux, setResponseAux] = useState<AuxMarca[]>([]);
     const [imagenes,setImagenes] = useState<Record<string, { default: string }>>({}); 
@@ -39,7 +39,7 @@ const Vista_Productos = ({ tienda }: Props) => {
             } else {
                 console.error('No se recibieron datos o los datos están en un formato inesperado');
             }
-        } catch (error) {
+        } catch {
             Swal.fire({
                 icon: 'error',
                 title: 'Error',
@@ -51,37 +51,41 @@ const Vista_Productos = ({ tienda }: Props) => {
     useEffect(() => {
         getAuxMarca();
         switch (tienda) {
-            case "Inicio":
+            case "Inicio": {
                 setResponse(responseFilter);
                 const imgs = import.meta.glob('/src/assets/imgs/img/imagenesMain/imgcards/*.png', { eager: true })as Record<string, { default: string }>;
                 setImagenes(imgs);
-                break;
-            case "Videojuegos":
+                break;}
+            case "Videojuegos":{
                 const FilterJue = responseFilter.filter(item => item.idTipoProducto === "Videojuego");
                 if (FilterJue) setResponse(FilterJue);
-                break;
-            case "Consolas":
+                const imgs = import.meta.glob('/src/assets/imgs/img/videojuegos/imgCards/*.png', { eager: true })as Record<string, { default: string }>;
+                setImagenes(imgs);
+                break;}
+            case "Consolas":{
                 const FilterCon = responseFilter.filter(item => item.idTipoProducto === "Consola");
                 if (FilterCon) setResponse(FilterCon);
-                break;
-            case "Nintendo":
+                const imgs = import.meta.glob('/src/assets/imgs/img/consolas img/*.png', { eager: true })as Record<string, { default: string }>;
+                setImagenes(imgs);
+                break;}
+            case "Nintendo":{
                 const FilterNin = responseAux.filter(item => item.fk_pk_marca === "Nintendo");
                 const coincidencias = responseFilter.filter(p1 =>
                     FilterNin.some(p2 => p2.fk_pk_producto === p1.idProducto));
                 setResponse(coincidencias);
-                break;
-            case "PlayStation":
+                break;}
+            case "PlayStation":{
                 const FilterPlay = responseAux.filter(item => item.fk_pk_marca === "PlayStation");
                 const coincidenciasP = responseFilter.filter(p1 =>
                     FilterPlay.some(p2 => p2.fk_pk_producto === p1.idProducto));
                 setResponse(coincidenciasP);
-                break;
-            case "Xbox":
+                break;}
+            case "Xbox":{
                 const FilterXbox = responseAux.filter(item => item.fk_pk_marca === "Xbox");
                 const coincidenciasX = responseFilter.filter(p1 =>
                     FilterXbox.some(p2 => p2.fk_pk_producto === p1.idProducto));
                 setResponse(coincidenciasX);
-                break;
+                break;}
         }
     }, [responseFilter]);
 
