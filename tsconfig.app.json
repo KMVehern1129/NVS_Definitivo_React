@@ -13,7 +13,8 @@
       "@components/*": ["src/components/*"],
       "@hooks/*": ["src/hooks/*"],
       "@assets/*": ["src/assets/*"],
-      "@css/*": ["src/css/*"]
+      "@css/*": ["src/css/*"],
+      "@contexts/*": ["src/contexts/*"]
     },
   
 

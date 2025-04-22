@@ -1,9 +1,11 @@
 //components
-import Nav from "@components/nav";
+import Tienda_Inicio from "@pages/tiendaInicio";
 
 //hooks
-import { useEffect, useState } from "react";
-import { ApiGet } from "@hooks/UseAxios";
+import { useState, useEffect } from "react";
+
+//contexts
+import { apiContextProduct, Producto } from "@contexts/productContext";
 
 //css
 import '@css/principal/index.css';
@@ -17,54 +19,27 @@ import imgPlayRight from '@assets/imgs/imgPs5Right.png'
 import imgNin from '@assets/imgs/imgnin.png'
 import imgNinRight from '@assets/imgs/imgninRight.png'
 
-interface Producto {
-  idProducto: number;
-  nombreProducto: string;
-  precioProducto: number;
-  ivaProducto: number;
-  garantiaProducto: string;
-  idTipoProducto: string;
-  idAdministrar_crear: number;
-  stock: number;
-}
+const Principal = () => {
 
-const Inicio = () => {
-
-  const endpoint: string = '/Productos/Producto.php';
-  const [responseFind, setResponseFind] = useState<Producto[]>([]);
+  const { responseFilter } = apiContextProduct();
   const [Xbox, setXbox] = useState<Producto | null>(null);
   const [Nintendo, setNin] = useState<Producto | null>(null);
   const [Play, setPlay] = useState<Producto | null>(null);
+  const [BannerInicio, setBannerInicio] = useState<Producto | null>(null);
 
-  const AxiosPrincipal = async () => {
-    try {
-      const res = await ApiGet(endpoint);
-      if (res) {
-        const data: Producto[] = res.data;
-        setResponseFind(data);
+useEffect(() => {
+  const xboxItem = responseFilter.find(item => item.nombreProducto === "Xbox Series X");
+  const nintendoItem = responseFilter.find(item => item.nombreProducto === "Nintendo Switch");
+  const playItem = responseFilter.find(item => item.nombreProducto === "PlayStation 5");
+  const BannerInicioF = responseFilter.find(item => item.nombreProducto === "Marvel’s Spider-Man: Miles Morales");
 
-        const xboxItem = data.find(item => item.nombreProducto === "Xbox Series X");
-        const nintendoItem = data.find(item => item.nombreProducto === "Nintendo Switch");
-        const playItem = data.find(item => item.nombreProducto === "PlayStation 5");
-
-        if (xboxItem) setXbox(xboxItem);
-        if (nintendoItem) setNin(nintendoItem);
-        if (playItem) setPlay(playItem);
-      } else {
-        console.log("error al cargar productos")
-      }
-    } catch (error) {
-      console.error('Error cargando clientes:', error);
-    }
-  };
-
-  useEffect(() => {
-    AxiosPrincipal();
-  }, []);
-
+  if (xboxItem) setXbox(xboxItem);
+  if (nintendoItem) setNin(nintendoItem);
+  if (playItem) setPlay(playItem);
+  if (BannerInicioF) setBannerInicio(BannerInicioF);
+}, [responseFilter]);
   return (
     <div className="container_Principal">
-      <Nav />
       <section className="container_banners">
         <figure className="A1" style={{ gridArea: "A1" }}>
           <div className="cont-left">
@@ -157,8 +132,9 @@ const Inicio = () => {
           </div>
         </figure>
       </section>
+      <Tienda_Inicio Banner={BannerInicio} />
     </div>
-  );
+  )
 };
 
-export default Inicio;
+export default Principal;

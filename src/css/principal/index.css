@@ -81,6 +81,7 @@ nav .container_nav {
     box-sizing: border-box;
     flex-direction: row;
     gap: 1.5%;
+    
 }
 
 .container_nav ul li a {
@@ -91,6 +92,7 @@ nav .container_nav {
     border-radius: 100px;
     text-decoration: none;
     transition: .2s;
+    color: #ffffff;
 }
 
 .container_nav ul li a:hover {
@@ -529,14 +531,14 @@ nav .container_nav_button a {
     flex-direction: column;
 }
 
-footer{
+.footerP{
     padding: 5px;
     background-color:#0c0220 ;
     display: flex;
     flex-direction: column;
 }
 
-footer .container-footer {
+.footerP .container-footer {
     display: flex;
     flex-direction: row;
     width: 100%;

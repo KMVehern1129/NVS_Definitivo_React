@@ -1,5 +1,7 @@
+//hooks
 import { useState, useEffect } from "react";
 import { ApiGet, ApiPost, ApiPut } from '@hooks/UseAxios.tsx';
+//librerias
 import Swal from "sweetalert2";
 
 interface MyModalProps {
@@ -12,8 +14,6 @@ interface MyModalProps {
   comentario: string;
   modal: string;
 }
-
-
 
 interface Cliente {
   idCliente: number;
@@ -37,7 +37,7 @@ const ExampleModal: React.FC<MyModalProps> = ({ idCliente, idProducto, calificac
 
 
   useEffect(() => {
-    const fetchCli_Pro = async () => {
+    const AxiosCli_Pro = async () => {
       try {
         const result = await ApiGet(endpoint);
         const resultP = await ApiGet(endpointP);
@@ -53,7 +53,7 @@ const ExampleModal: React.FC<MyModalProps> = ({ idCliente, idProducto, calificac
       }
     };
 
-    fetchCli_Pro();
+    AxiosCli_Pro();
   }, []);
 
   const handleProductoChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
