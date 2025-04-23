@@ -1,5 +1,5 @@
 //css
-import '@css/principal/index.css';
+import '@css/principal/nav.css';
 //assets
 import settingImage1 from '@assets/imgs/logoNVS.svg'
 //librerias

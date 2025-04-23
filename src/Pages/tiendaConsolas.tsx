@@ -2,12 +2,13 @@ import Footer from "@components/Tiendas/footer";
 import Vista_Productos from "@components/Tiendas/vistaProductos";
 import { useState,useEffect } from "react";
 import Banner from '@assets/imgs/img/consolas img/banner.png'
+import imgNombreConsola from '@assets/imgs/imgXbox.png'
 
 //contexts
 import { Producto, useApiContextProduct } from '../contexts/productContext';
 
 //css
-import '@css/principal/index.css';
+
 
 
 
@@ -27,10 +28,9 @@ return(
                 <figure>
                     <img src={Banner} alt="" width="100%" />
                     <div className="text-img-banner">
-                        {BannerInicio && (
-                            <span>{BannerInicio.nombreProducto}
-                            </span>
-                        )}
+                        <div className="img-left">
+                            <img src={imgNombreConsola} alt="" width="40%"/>
+                        </div>
                         <div className="price">
                             <button className="button-info">INFO</button>
                             <div className="cont-price">
@@ -39,7 +39,7 @@ return(
                                 </span>
 
                                 {BannerInicio && (
-                            <span>{BannerInicio.precioProducto.toLocaleString('es-CO', {
+                            <span className="price-two">{BannerInicio.precioProducto.toLocaleString('es-CO', {
                                 minimumFractionDigits: 0,
                                 maximumFractionDigits: 0
                               })}
@@ -53,7 +53,7 @@ return(
             </header>
             <div className="span">
                 <span>
-                    Tendencias
+                    !Lo mas Vendido!
                 </span>
             </div>
             <Vista_Productos tienda="Consolas"/>
