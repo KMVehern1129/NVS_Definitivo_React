@@ -16,7 +16,12 @@ import Tienda_Nintendo from "@pages/tiendaNintendo";
 import Tienda_Play from "@pages/tiendaPlay";
 import Tienda_Xbox from "@pages/tiendaXbox";
 import Calificacion_Cli_Pro from "@pages/Calificacion_prod_cli";
-import RecuperarContrasena from './Form/recuperarContrasena'; 
+import RecuperarContrasena from './Form/RecuperarContrasena'; 
+import VistaUsuarioCorreo from "@pages/Vista_Controlador_Usuario";
+import Correo from "@components/Controlador_Usuario B/Correo";
+import Contrasena from "@components/Controlador_Usuario B/Contrasena";
+import Nombre from "@components/Controlador_Usuario B/Nombre";
+import Direccion from "@components/Controlador_Usuario B/Direccion";
 
 
 
@@ -31,6 +36,12 @@ function App() {
           <Route path="/TiendaNintendo" element={<Tienda_Nintendo />} />
           <Route path="/TiendaPlayStation" element={<Tienda_Play />} />
           <Route path="/TiendaXbox" element={<Tienda_Xbox />} />
+          <Route path="/Usuario" element={<VistaUsuarioCorreo />}>
+          <Route path="/Usuario/Correo" element={<Correo />}/>
+          <Route path="/Usuario/Contraseña" element={<Contrasena />}/>
+          <Route path="/Usuario/Direccion" element={<Direccion />}/>
+          <Route path="/Usuario/Nombre" element={<Nombre />}/>
+          </Route>
         </Route>
       <Route path="/recuperarContrasena" element={<RecuperarContrasena />} />
       <Route path="/Administrador/Calificaciones/" element={<Calificacion_Cli_Pro />}></Route>
