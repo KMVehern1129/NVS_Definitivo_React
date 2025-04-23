@@ -16,6 +16,8 @@ import Tienda_Nintendo from "@pages/tiendaNintendo";
 import Tienda_Play from "@pages/tiendaPlay";
 import Tienda_Xbox from "@pages/tiendaXbox";
 import Calificacion_Cli_Pro from "@pages/Calificacion_prod_cli";
+import RecuperarContrasena from './Form/recuperarContrasena'; 
+
 
 
 function App() {
@@ -30,6 +32,7 @@ function App() {
           <Route path="/TiendaPlayStation" element={<Tienda_Play />} />
           <Route path="/TiendaXbox" element={<Tienda_Xbox />} />
         </Route>
+      <Route path="/recuperarContrasena" element={<RecuperarContrasena />} />
       <Route path="/Administrador/Calificaciones/" element={<Calificacion_Cli_Pro />}></Route>
       <Route path="*" element={<h1>Not found</h1>} />
     </Routes>
