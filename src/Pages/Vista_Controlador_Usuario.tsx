@@ -9,6 +9,8 @@ import Arroba from '@assets/imgs/Cont_Usu_B/Arroba.png';
 import Candado from '@assets/imgs/Cont_Usu_B/candado.png';
 import Usuario_Abajo from '@assets/imgs/Cont_Usu_B/Usuario_Nav_Abajo.png';
 import Ubicacion from '@assets/imgs/Cont_Usu_B/Ubicacion.png';
+import Flecha from '@assets/imgs/Cont_Usu_B/Flecha_Derecha.png';
+import Mensaje from '@assets/imgs/Cont_Usu_B/Mensaje.png';
 
 const VistaUsuarioCorreo = () => {
   return (
@@ -37,7 +39,7 @@ const VistaUsuarioCorreo = () => {
               <h2><b>Seguridad De Cuenta</b></h2>
               <p>Mojanroja03@gmail.com</p>
             </div>
-            <button id="Abrir_Pop_Up"><img src="../Mensaje.png" alt="" /></button>
+            <button id="Abrir_Pop_Up"><img src={Mensaje} alt="" /></button>
             <div className="popup" id="popup">
               <div className="popup-contenido">
                 <section id="One">
@@ -84,10 +86,10 @@ const VistaUsuarioCorreo = () => {
                   <li><Link to="/Usuario/Direccion">Cambiar Dirección</Link></li>
                 </ul>
                 <figure className="Flechas_Menu_Usuario">
-                  <img src="../Flecha_Derecha.png" alt="Icono Flecha" />
-                  <img src="../Flecha_Derecha.png" alt="Icono Flecha" />
-                  <img src="../Flecha_Derecha.png" alt="Icono Flecha" />
-                  <img src="../Flecha_Derecha.png" alt="Icono Flecha" />
+                  <img src={Flecha} alt="Icono Flecha" />
+                  <img src={Flecha} alt="Icono Flecha" />
+                  <img src={Flecha} alt="Icono Flecha" />
+                  <img src={Flecha} alt="Icono Flecha" />
                 </figure>
               </nav>
             </section>
