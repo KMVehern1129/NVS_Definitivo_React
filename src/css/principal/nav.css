@@ -1,0 +1,114 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: rgb(255, 255, 255);
+
+}
+
+@font-face {
+    font-family: FuenteNVS;
+    src: url(../../assets/fonts/Quicksand-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: FuenteNVS2;
+    src: url(../../assets/fonts/LeagueSpartan-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: FuenteNVS3;
+    src: url(../../assets/fonts/OpenSans-VariableFont_wdth,wght.ttf);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 0px;
+    z-index: 100;
+}
+
+header nav {
+    margin-top: 100px;
+    margin-left: 60px;
+    box-sizing: border-box;
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+}
+
+.blurefect {
+    background: #01010f86;   
+    backdrop-filter: blur(0.7rem);
+}
+
+nav .container_nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    height: 70%;
+    padding-left: 4%;
+    border-radius: 50px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+.container_nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin-right: 5%;
+    margin-bottom: 0px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    flex-direction: row;
+    gap: 1.5%;
+    
+}
+
+.container_nav ul li a {
+    padding-top: 5px;
+    padding-bottom: 6px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: .2s;
+    color: #ffffff;
+}
+
+.container_nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.473);
+    text-shadow: rgb(255, 255, 255) 1px 0 10px;
+}
+
+nav .container_nav_button {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1%;
+    height: 80%;
+    width: 20%;
+    gap: 4%;
+}
+
+nav .container_nav_button a {
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 100px;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+}

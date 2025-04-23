@@ -34,7 +34,7 @@ const Tienda_Inicio = ({ Banner }: TiendaInicioProps) => {
                                 </span>
 
                                 {Banner && (
-                            <span>{Banner.precioProducto.toLocaleString('es-CO', {
+                            <span className="price-two">{Banner.precioProducto.toLocaleString('es-CO', {
                                 minimumFractionDigits: 0,
                                 maximumFractionDigits: 0
                               })}

@@ -1,3 +1,8 @@
+import imageStars from "@assets/imgs/img/Footer/Captura de pantalla 2024-08-20 000440.png"
+import imageRedes from "@assets/imgs/img/Footer/Captura de pantalla 2024-08-20 010228.png"
+
+import '@css/principal/index.css';
+
 const Footer = () => {
     return(
         <footer className="footerP">
@@ -30,21 +35,21 @@ const Footer = () => {
                         </div>
                     </article>
 
-                    <section>
+                    <section className="section_F" >
                         <span>CALIFICANOS</span>
-                        <img src="img/Footer/Captura de pantalla 2024-08-20 000440.png" alt="" width="40%"/>
+                        <img src={imageStars} alt="" width="40%"/>
                     </section>
                 </div>
                 <div className="p2">
-                    <section>
+                    <section className="section_F">
                         <span>
                             PQRS
                         </span>
                         <textarea name="" id="" placeholder="Deja un comentario..."></textarea>
                     </section>
-                    <section>
+                    <section className="section_F">
                         <span>SÍGUENOS</span>
-                        <img src="../../img/Footer/Captura de pantalla 2024-08-20 010228.png" alt="" width="30%"/>
+                        <img src={imageRedes} alt="" width="30%"/>
                     </section>
                 </div>
             </div>

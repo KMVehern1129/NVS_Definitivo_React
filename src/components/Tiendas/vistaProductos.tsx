@@ -29,7 +29,7 @@ const Vista_Productos = ({ tienda }: Props) => {
     const { responseFilter } = useApiContextProduct();
     const [response, setResponse] = useState<Producto[]>([]);
     const [responseAux, setResponseAux] = useState<AuxMarca[]>([]);
-    const [imagenes,setImagenes] = useState<Record<string, { default: string }>>({}); 
+    const [imagenes, setImagenes] = useState<Record<string, { default: string }>>({});
 
     const getAuxMarca = async () => {
         try {
@@ -53,72 +53,108 @@ const Vista_Productos = ({ tienda }: Props) => {
         switch (tienda) {
             case "Inicio": {
                 setResponse(responseFilter);
-                const imgs = import.meta.glob('/src/assets/imgs/img/imagenesMain/imgcards/*.png', { eager: true })as Record<string, { default: string }>;
+                const imgs = import.meta.glob('/src/assets/imgs/img/imagenesMain/imgcards/*.png', { eager: true }) as Record<string, { default: string }>;
                 setImagenes(imgs);
-                break;}
-            case "Videojuegos":{
+                break;
+            }
+            case "Videojuegos": {
                 const FilterJue = responseFilter.filter(item => item.idTipoProducto === "Videojuego");
                 if (FilterJue) setResponse(FilterJue);
-                const imgs = import.meta.glob('/src/assets/imgs/img/videojuegos/imgCards/*.png', { eager: true })as Record<string, { default: string }>;
+                const imgs = import.meta.glob('/src/assets/imgs/img/videojuegos/imgCards/*.png', { eager: true }) as Record<string, { default: string }>;
                 setImagenes(imgs);
-                break;}
-            case "Consolas":{
+                break;
+            }
+            case "Consolas": {
                 const FilterCon = responseFilter.filter(item => item.idTipoProducto === "Consola");
                 if (FilterCon) setResponse(FilterCon);
-                const imgs = import.meta.glob('/src/assets/imgs/img/consolas img/*.png', { eager: true })as Record<string, { default: string }>;
+                const imgs = import.meta.glob('/src/assets/imgs/img/consolas img/*.png', { eager: true }) as Record<string, { default: string }>;
                 setImagenes(imgs);
-                break;}
-            case "Nintendo":{
+                break;
+            }
+            case "Nintendo": {
                 const FilterNin = responseAux.filter(item => item.fk_pk_marca === "Nintendo");
                 const coincidencias = responseFilter.filter(p1 =>
                     FilterNin.some(p2 => p2.fk_pk_producto === p1.idProducto));
                 setResponse(coincidencias);
-                break;}
-            case "PlayStation":{
+                const imgs = import.meta.glob('/src/assets/imgs/img/nintendo/imgCards/*.png', { eager: true }) as Record<string, { default: string }>;
+                setImagenes(imgs);
+                break;
+            }
+            case "PlayStation": {
                 const FilterPlay = responseAux.filter(item => item.fk_pk_marca === "PlayStation");
                 const coincidenciasP = responseFilter.filter(p1 =>
                     FilterPlay.some(p2 => p2.fk_pk_producto === p1.idProducto));
                 setResponse(coincidenciasP);
-                break;}
-            case "Xbox":{
+                const imgs = import.meta.glob('/src/assets/imgs/img/playstation/imgCards/*.png', { eager: true }) as Record<string, { default: string }>;
+                setImagenes(imgs);
+                break;
+            }
+            case "Xbox": {
                 const FilterXbox = responseAux.filter(item => item.fk_pk_marca === "Xbox");
                 const coincidenciasX = responseFilter.filter(p1 =>
                     FilterXbox.some(p2 => p2.fk_pk_producto === p1.idProducto));
                 setResponse(coincidenciasX);
-                break;}
+                const imgs = import.meta.glob('/src/assets/imgs/img/xbox/imgCards/*.png', { eager: true }) as Record<string, { default: string }>;
+                setImagenes(imgs);
+                break;
+            }
         }
     }, [responseFilter]);
 
-    const obtenerImagen = (nombre: string): string => {
-        const key = `/src/assets/imgs/img/imagenesMain/imgcards/${nombre}.png`;
-        const img = imagenes[key] as { default: string } | undefined;
-        return img?.default || (imagenes['/src/assets/imgs/img/imagenesMain/imgcards/default.png'] as { default: string }).default;
-      };
+    const SeleccionarTienda = (nombre: string, tienda: string) => {
+        switch (tienda) {
+            case "Inicio":
+                const key = `/src/assets/imgs/img/imagenesMain/imgcards/${nombre}.png`;
+                const img = imagenes[key] as { default: string } | undefined;
+                return img?.default || (imagenes['/src/assets/imgs/img/imagenesMain/imgcards/default.png'] as { default: string }).default;
+            case "Videojuegos":
+                const keyV = `/src/assets/imgs/img/videojuegos/imgCards/${nombre}.png`;
+                const imgV = imagenes[keyV] as { default: string } | undefined;
+                return imgV?.default || (imagenes['/src/assets/imgs/img/videojuegos/imgcards/default.png'] as { default: string }).default;
+            case "Consolas":
+                const keyC = `/src/assets/imgs/img/consolas img/${nombre}.png`;
+                const imgC = imagenes[keyC] as { default: string } | undefined;
+                return imgC?.default || (imagenes['/src/assets/imgs/img/consolas img/default.png'] as { default: string }).default;
+            case "Nintendo":
+                const keyN = `/src/assets/imgs/img/nintendo/imgcards/${nombre}.png`;
+                const imgN = imagenes[keyN] as { default: string } | undefined;
+                return imgN?.default || (imagenes['/src/assets/imgs/img/nintendo/imgcards/default.png'] as { default: string }).default;
+            case "PlayStation":
+                const keyP = `/src/assets/imgs/img/playstation/imgcards/${nombre}.png`;
+                const imgP = imagenes[keyP] as { default: string } | undefined;
+                return imgP?.default || (imagenes['/src/assets/imgs/img/playstation/imgcards/default.png'] as { default: string }).default;
+            case "Xbox":
+                const keyX = `/src/assets/imgs/img/xbox/imgcards/${nombre}.png`;
+                const imgX = imagenes[keyX] as { default: string } | undefined;
+                return imgX?.default || (imagenes['/src/assets/imgs/img/xbox/imgcards/default.png'] as { default: string }).default;
+        }
+    };
 
-      return(
-    <div>
-        <section className="container-juegos">
-            {response.slice(0, 9).map((producto, index) => {
-                const imagen = obtenerImagen(producto.nombreProducto);
-                return (
-                    <div key={producto.idProducto} className="j1" style={{ gridArea: `j${index + 1}` }}>
-                        <div className="img-card">
-                            <img src={imagen} alt={producto.nombreProducto} />
+    return (
+        <div>
+            <section className="container-juegos">
+                {response.slice(0, 9).map((producto, index) => {
+                    const imagen = SeleccionarTienda(producto.nombreProducto, tienda);
+                    return (
+                        <div key={producto.idProducto} className="j1" style={{ gridArea: `j${index + 1}` }}>
+                            <div className="img-card">
+                                <img src={imagen} alt={producto.nombreProducto} />
+                            </div>
+                            <div className="text-card">
+                                <span className="tittle-card">{producto.nombreProducto}</span>
+                                <span className="price-card">
+                                    {producto.precioProducto.toLocaleString('es-CO', {
+                                        minimumFractionDigits: 0,
+                                        maximumFractionDigits: 0
+                                    })}
+                                </span>
+                            </div>
                         </div>
-                        <div className="text-card">
-                            <span className="tittle-card">{producto.nombreProducto}</span>
-                            <span className="price-card">
-                                {producto.precioProducto.toLocaleString('es-CO', {
-                                    minimumFractionDigits: 0,
-                                    maximumFractionDigits: 0
-                                })}
-                            </span>
-                        </div>
-                    </div>
-                );
-            })}
-        </section>
-        <Ofertas />
-    </div>
-)}
+                    );
+                })}
+            </section>
+            <Ofertas />
+        </div>
+    )
+}
 export default Vista_Productos;

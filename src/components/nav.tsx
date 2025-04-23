@@ -1,6 +1,12 @@
+
+//css
+import '@css/principal/nav.css';
+//assets
+import settingImage1 from '@assets/imgs/logoNVS.svg'
+//librerias
+
 import { Link, Outlet } from 'react-router-dom'; 
 import '@css/principal/index.css';
-import settingImage1 from '@assets/imgs/logoNVS.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faUser, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
