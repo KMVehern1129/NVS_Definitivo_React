@@ -1,12 +1,17 @@
+
 import { useState } from "react";
 import { Form, Input, P, Boton } from "../../../elements/FormElements";
+import { ApiPost } from "@hooks/UseAxios";
 
 const Formulario = () => {
+  const endpoint: string = '/Usuarios/recuperarContrasena.php';
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const [respuesta, setRespuesta] = useState('');
+  
+  const handleSubmit = async (e) => {
+      e.preventDefault();
+      const data = {email:email};
 
     if (!email) {
       setError('El campo no puede estar vacío');
@@ -14,11 +19,20 @@ const Formulario = () => {
       setError('Debe contener un @ válido');
     } else {
       setError('');
-      console.log('Formulario enviado con:', email);
+      try {
+        const res = await ApiPost
+        (endpoint,data); 
+        setRespuesta(res.data.message);
+      } catch (err) {
+        setRespuesta("Hubo un error al procesar la solicitud.");
+      }
     }
   };
 
-  return (
+  
+
+
+return (
     <Form onSubmit={handleSubmit}>
       <Input
         type="text"
@@ -28,6 +42,7 @@ const Formulario = () => {
         style={{ border: error ? '1px solid red' : '' }}
       />
       {error && <P style={{ color: 'red', fontSize: '14px' }}>{error}</P>}
+      {respuesta && <P style={{ color: 'green', fontSize: '14px' }}>{respuesta}</P>}
       <Boton type="submit">Enviar</Boton>
     </Form>
   );
