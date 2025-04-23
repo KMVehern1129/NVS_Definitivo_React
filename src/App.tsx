@@ -31,8 +31,8 @@ function App() {
           <Route path="/TiendaNintendo" element={<Tienda_Nintendo />} />
           <Route path="/TiendaPlayStation" element={<Tienda_Play />} />
           <Route path="/TiendaXbox" element={<Tienda_Xbox />} />
-          <Route path="/recuperarContrasena" element={<RecuperarContrasena />} />
         </Route>
+      <Route path="/recuperarContrasena" element={<RecuperarContrasena />} />
       <Route path="/Administrador/Calificaciones/" element={<Calificacion_Cli_Pro />}></Route>
       <Route path="*" element={<h1>Not found</h1>} />
     </Routes>
