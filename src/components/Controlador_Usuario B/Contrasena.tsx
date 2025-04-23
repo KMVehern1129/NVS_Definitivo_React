@@ -1,4 +1,4 @@
-const Form = () => (
+const Contrasena= () => (
     <section id="Dos">
       <h2><b>Cambiar Contraseña</b></h2>
       <form id="Formulario" method="post" action="Index_Vista_Usuario_Correo.html">
@@ -10,5 +10,5 @@ const Form = () => (
     </section>
   );
   
-  export default Form;
+  export default Contrasena;
   
