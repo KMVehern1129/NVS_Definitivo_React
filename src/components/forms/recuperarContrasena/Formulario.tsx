@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Form, Input, P, Boton } from "../../../elements/FormElements";
+import { Form, Input, P, Boton } from "../../../elements/formElements";
 import { ApiPost } from "@hooks/UseAxios";
 
 const Formulario = () => {
@@ -35,9 +35,11 @@ const Formulario = () => {
 return (
     <Form onSubmit={handleSubmit}>
       <Input
-        type="text"
+        type="email"
         placeholder="Email"
         value={email}
+        name="email"
+        id="email"
         onChange={(e) => setEmail(e.target.value)}
         style={{ border: error ? '1px solid red' : '' }}
       />

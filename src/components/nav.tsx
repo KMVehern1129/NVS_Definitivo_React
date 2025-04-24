@@ -27,7 +27,7 @@ const Nav = () => {
                         </ul>
                     </div>
                     <div className="container_nav_button">
-                        <Link to="/recuperarContrasena" className="blurefect">
+                        <Link to="/Login" className="blurefect">
                             <FontAwesomeIcon icon={faUser} className="icon" />
                         </Link>
                         <a className="blurefect" href="#"><FontAwesomeIcon icon={faMagnifyingGlass} className="icon" /></a>
