@@ -9,7 +9,7 @@ const ContainerInputs = styled.div`
      box-sizing: border-box;
 `;
 const Boton = styled.button`
-  width: 40%;
+  width: 55%;
   background: linear-gradient(to left, #00bbff, #6a35cf);
   color: white;
   font-size: 15px;
@@ -25,10 +25,18 @@ const Boton = styled.button`
   }
 `;
 
+const ContainerLink = styled.div`
+  margin-top:30px;
+      display:flex;
+    flex-direction:column;
+     align-items: center;
+    justify-content: center;
+`;
 
 
 
 export {
     ContainerInputs,
     Boton,
+    ContainerLink
 }

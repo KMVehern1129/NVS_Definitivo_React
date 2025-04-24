@@ -20,6 +20,7 @@ import Calificacion_Cli_Pro from "@pages/Calificacion_prod_cli";
 import Login from './Form/Login';
 import RecuperarContrasena from "./Form/RecuperarContrasena";
 import DetallesVideojuego from "@pages/detallesVideojuego";
+import Registrar from "./Form/Registrar";
 import VistaUsuarioCorreo from "@pages/Vista_Controlador_Usuario";
 import Correo from "@components/Controlador_Usuario B/Correo";
 import Contrasena from "@components/Controlador_Usuario B/Contrasena";
@@ -47,9 +48,15 @@ function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="/Administrador/Calificaciones/" element={<Calificacion_Cli_Pro />}></Route>
         <Route path="*" element={<h1>Not found</h1>} />
+        <Route path="/Registrar" element={<Registrar />} />
+        <Route path="/RecuperarContrasena" element={<RecuperarContrasena />} />
+        <Route path="/inicio" element={<Principal />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Administrador/Calificaciones/" element={<Calificacion_Cli_Pro />}></Route>
+        <Route path="*" element={<h1>Not found</h1>} />
       </Routes>
     </ApiProducto>
-  );
+  )
 }
 
 export default App;
