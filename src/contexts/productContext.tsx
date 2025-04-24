@@ -19,7 +19,7 @@ interface ApiContextProps {
 
 const ApiContext = createContext<ApiContextProps | null>(null);
 
-export const ApiProvider = ({ children }: { children: React.ReactNode }) => {
+export const ApiProducto = ({ children }: { children: React.ReactNode }) => {
   const [responseFilter, setResponseFilter] = useState<Producto[]>([]);
 
   const cargarProductos = async () => {
@@ -48,6 +48,6 @@ export const ApiProvider = ({ children }: { children: React.ReactNode }) => {
 
 export const useApiContextProduct = () => {
   const context = useContext(ApiContext);
-  if (!context) throw new Error('useApi debe usarse dentro de ApiProvider');
+  if (!context) throw new Error('useApi debe usarse dentro de ApiProducto');
   return context;
 };

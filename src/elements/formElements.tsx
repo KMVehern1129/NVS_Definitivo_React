@@ -1,4 +1,4 @@
-import styled, {css}from "styled-components";
+import styled, {css} from "styled-components";
 
 
 const Container = styled.div`
@@ -26,7 +26,8 @@ const LeftSection = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height:100vh;
+  height: 95vh;
+  
 `;
 
 const ImgHeader = styled.div`
@@ -63,13 +64,13 @@ const RightSection = styled.section`
         hsl(257deg 61% 14%) 65%,
         hsl(256deg 29% 13%) 100%
       );
-    padding-top: 40px;
     box-sizing: border-box;
     width: 55%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 0px;
 
 `;
 
@@ -132,7 +133,7 @@ const Figure = styled.div`
   );
   padding-top: 40px;
   width: 80%;
-  height: 100vh;
+  height: 99.9vh;
   display: flex;
   align-items: center;
   justify-content: center;
