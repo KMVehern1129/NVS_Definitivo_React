@@ -4,7 +4,6 @@ import { useApiContextProduct, Producto } from "@contexts/productContext";
 //hooks
 import { useState, useEffect } from "react";
 //css
-import "@css/principal/tiendaNintendo.css"
 
 //components
 import Vista_Productos from "@components/Tiendas/vistaProductos";

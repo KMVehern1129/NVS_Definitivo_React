@@ -1,6 +1,6 @@
 import Footer from "@components/Tiendas/footer";
 import Vista_Productos from "@components/Tiendas/vistaProductos";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import Banner from '@assets/imgs/img/consolas img/banner.png'
 import imgNombreConsola from '@assets/imgs/imgXbox.png'
 
@@ -18,18 +18,18 @@ const Tienda_Consolas = () => {
     const [BannerInicio, setBannerInicio] = useState<Producto | null>(null);
 
     useEffect(() => {
-      const BannerInicioF = responseFilter.find(item => item.nombreProducto === "Marvel’s Spider-Man: Miles Morales");
-    
-      if (BannerInicioF) setBannerInicio(BannerInicioF);
+        const BannerInicioF = responseFilter.find(item => item.nombreProducto === "Marvel’s Spider-Man: Miles Morales");
+
+        if (BannerInicioF) setBannerInicio(BannerInicioF);
     }, [responseFilter]);
-return(
-<main className="container-principal">
+    return (
+        <main className="container-principal">
             <header>
                 <figure>
                     <img src={Banner} alt="" width="100%" />
                     <div className="text-img-banner">
                         <div className="img-left">
-                            <img src={imgNombreConsola} alt="" width="40%"/>
+                            <img src={imgNombreConsola} alt="" width="40%" />
                         </div>
                         <div className="price">
                             <button className="button-info">INFO</button>
@@ -39,12 +39,12 @@ return(
                                 </span>
 
                                 {BannerInicio && (
-                            <span className="price-two">{BannerInicio.precioProducto.toLocaleString('es-CO', {
-                                minimumFractionDigits: 0,
-                                maximumFractionDigits: 0
-                              })}
-                            </span>
-                        )}
+                                    <span className="price-two">{BannerInicio.precioProducto.toLocaleString('es-CO', {
+                                        minimumFractionDigits: 0,
+                                        maximumFractionDigits: 0
+                                    })}
+                                    </span>
+                                )}
                             </div>
                         </div>
                     </div>
@@ -56,8 +56,9 @@ return(
                     !Lo mas Vendido!
                 </span>
             </div>
-            <Vista_Productos tienda="Consolas"/>
-            <Footer/>
+            <Vista_Productos tienda="Consolas" />
+            <Footer />
         </main>
-)}
+    )
+}
 export default Tienda_Consolas;

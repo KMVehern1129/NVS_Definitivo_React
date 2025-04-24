@@ -1,4 +1,4 @@
-import { RightSection, Figure } from "../../../elements/FormElements";
+import { RightSection, Figure } from "../../../elements/formElements";
 import Imagenes from "@components/forms/comun/imgComponent";
 
 const ImagenDecorativa = () => (

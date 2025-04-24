@@ -3,7 +3,6 @@ import {
     LeftSection,
     Container_Form
   } from "../elements/formElements";
-  
   import Formulario from "../components/forms/recuperarContrasena/Formulario";
   import Instrucciones from "../components/forms/recuperarContrasena/Instrucciones";
   import ImagenDecorativa from "../components/forms/comun/ImagenDecorativa";
@@ -23,4 +22,4 @@ import {
   );
   
   export default RecuperarContrasena;
-  
+

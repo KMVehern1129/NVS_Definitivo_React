@@ -9,7 +9,6 @@ import Footer from '@components/Tiendas/footer';
 import { Producto } from '../contexts/productContext';
 
 //css
-import '@css/principal/index.css';
 
 interface TiendaInicioProps {
     Banner: Producto | null;
@@ -17,11 +16,11 @@ interface TiendaInicioProps {
 
 const Tienda_Inicio = ({ Banner }: TiendaInicioProps) => {
     return (
-        <main className="container-principal">
+        <main className="container_principal">
             <header>
                 <figure>
                     <img src={imageBanner} alt="" width="100%" />
-                    <div className="text-img-banner">
+                    <div className="text_img_banner">
                         {Banner && (
                             <span>{Banner.nombreProducto}
                             </span>

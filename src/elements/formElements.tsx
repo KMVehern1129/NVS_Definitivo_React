@@ -94,12 +94,15 @@ const Input = styled.input`
     border: none;
     padding-left: 10px;
     color: aliceblue;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
       
     &::placeholder {
         font-size: 12px;
           color: rgba(255, 255, 255, 0.6); /* Color visible para el placeholder */
   }
+              &:focus {
+        box-shadow: 0 0 8px 2px #00f7ff;
+    }
 
 `;
 

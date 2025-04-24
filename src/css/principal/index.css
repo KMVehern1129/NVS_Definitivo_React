@@ -2,26 +2,19 @@
     padding: 0;
     margin: 0;
     color: rgb(255, 255, 255);
-
 }
 
 @font-face {
     font-family: FuenteNVS;
-    src: url(../../assets/fonts/Quicksand-VariableFont_wght.ttf);
+    src: url(../fonts/Quicksand-VariableFont_wght.ttf);
 }
 
 @font-face {
     font-family: FuenteNVS2;
-    src: url(../../assets/fonts/LeagueSpartan-VariableFont_wght.ttf);
+    src: url(../fonts/LeagueSpartan-VariableFont_wght.ttf);
 }
 
-@font-face {
-    font-family: FuenteNVS3;
-    src: url(../../assets/fonts/OpenSans-VariableFont_wdth,wght.ttf);
-}
-
-.container_Principal {
-    margin: 0px;
+.containerP{
     width: 100%;
     height: auto;
     display: flex;
@@ -34,13 +27,11 @@ header {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 0px;
     z-index: 100;
 }
 
 header nav {
     margin-top: 100px;
-    margin-left: 60px;
     box-sizing: border-box;
     height: 5rem;
     width: 100%;
@@ -48,43 +39,42 @@ header nav {
     align-items: center;
     justify-content: center;
     position: fixed;
+    padding-right: 30px;
 }
 
 .blurefect {
+
     background: #01010f86;   
     backdrop-filter: blur(0.7rem);
 }
 
-nav .container_nav {
+nav .container-nav {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     width: 50%;
     height: 70%;
-    padding-left: 4%;
+    padding-left: 3%;
     border-radius: 50px;
     box-sizing: border-box;
     overflow: hidden;
 }
 
 
-.container_nav ul {
+.container-nav ul {
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 80%;
     margin-right: 5%;
-    margin-bottom: 0px;
-    padding-left: 0px;
     box-sizing: border-box;
     flex-direction: row;
     gap: 1.5%;
-    
 }
 
-.container_nav ul li a {
+.container-nav ul li a {
     padding-top: 5px;
     padding-bottom: 6px;
     padding-right: 10px;
@@ -92,15 +82,14 @@ nav .container_nav {
     border-radius: 100px;
     text-decoration: none;
     transition: .2s;
-    color: #ffffff;
 }
 
-.container_nav ul li a:hover {
+.container-nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.473);
     text-shadow: rgb(255, 255, 255) 1px 0 10px;
 }
 
-nav .container_nav_button {
+nav .container-nav-button {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -112,7 +101,7 @@ nav .container_nav_button {
     gap: 4%;
 }
 
-nav .container_nav_button a {
+nav .container-nav-button a {
     height: 3.5rem;
     width: 3.5rem;
     border-radius: 100px;
@@ -122,7 +111,7 @@ nav .container_nav_button a {
     justify-content: center;
 }
 
-.container_Principal .container_banners {
+.containerP .container_banners {
     height: auto;
     width: 100%;
     display: grid;
@@ -148,7 +137,7 @@ nav .container_nav_button a {
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    margin-bottom: 0px;
+    margin: 0px;
 
 }
 
@@ -255,7 +244,6 @@ nav .container_nav_button a {
     align-items: center;
     gap: 1rem;
     box-sizing: border-box;
-    font-family: FuenteNVS;
 }
 
 .price .button-info {
@@ -264,7 +252,6 @@ nav .container_nav_button a {
     height: 2.5vw;
     border-radius: 3px;
     font-size: 1.2vw;
-    font-family: FuenteNVS3;
 }
 
 .A1 .price .button-info {
@@ -302,8 +289,8 @@ nav .container_nav_button a {
 }
 
 .container-cards,
-.container-principal,
-.container-principal header {
+.containerP,
+.containerP header {
     background-color: #1b014d;
 }
 
@@ -352,7 +339,7 @@ nav .container_nav_button a {
 
 }
 
-.container-principal {
+.container_principal {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -360,36 +347,37 @@ nav .container_nav_button a {
     align-items: center;
 }
 
-.container-principal header {
+.container_principal header {
     width: 100%;
-    height: 493px;
+    height: auto;
     z-index: 10;
 }
 
-.container-principal header figure {
+.container_principal header figure {
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: left;
     justify-content: center;
     width: 100vw;
     height: auto;
 }
 
-.container-principal header figure .overlay {
+.container_principal header figure .overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 18%;
+    height: 19%;
     background-color: #1b014d;
     clip-path: polygon(0 0, 100% 90%, 100% 110%, 0% 100%);
 }
 
-.container-principal header figure .text-img-banner {
+.container_principal header figure .text-img-banner {
     position: absolute;
     display: flex;
     flex-direction: column;
-    left: 60px;
+    gap: 3px;
+    left: 40px;
     width: 30%;
     font-family: FuenteNVS2;
 }
@@ -411,7 +399,7 @@ nav .container_nav_button a {
     color: rgba(255, 255, 255, 0.555);
 }
 
-.container-principal .span {
+.container_principal .span {
     width: 100%;
     height: 10vh;
     padding-left: 6%;
@@ -426,10 +414,8 @@ nav .container_nav_button a {
 
 
 .container-juegos{
-    margin-top: 0px;
     padding-top: 2rem;
-    padding-bottom: 2.5rem;
-    padding-left: 4.6rem;
+    padding-bottom: 2rem;
     width: 95%;
     height: auto;
     display: grid;
@@ -437,6 +423,7 @@ nav .container_nav_button a {
     grid-template-rows: 20vw 20vw 20vw;
     justify-content: center;
     gap: 1.5%;
+    margin-top: 0px;
 
 }
 
@@ -445,10 +432,8 @@ nav .container_nav_button a {
 }
 
 .container-juegos2 {
-    margin-top: 0px;
-    padding-top: 1rem;
+    padding-top: 2rem;
     padding-bottom: 2rem;
-    padding-left: 4.6rem;
     width: 95%;
     height: auto;
     display: grid;
@@ -456,7 +441,7 @@ nav .container_nav_button a {
     grid-template-columns: 27vw 27vw 27vw;
     justify-content: center;
     gap: 1.5%;
-
+    margin-top: 0;
 }
 
 .container-juegos {
@@ -534,26 +519,24 @@ nav .container_nav_button a {
     flex-direction: column;
 }
 
-.footerP{
-    
-    padding: 15px;
+footer{
+    width: 100%;
+    padding: 5px;
     background-color:#0c0220 ;
     display: flex;
     flex-direction: column;
-    width: 100%;
 }
 
-.footerP .container-footer {
-    margin-left: 50px;
+footer .container-footer {
     display: flex;
     flex-direction: row;
-    width: 97%;
+    width: 100%;
     height: 90%;
 }
 
 .container-footer .p1 article,
 .p1 section, .p2 section {
-    margin-left: 12px;
+    padding-top: 5px;
     display: flex;
     width: 100%;
     height: 100%;
@@ -568,25 +551,24 @@ nav .container_nav_button a {
     gap: 40px;
 }
 
-.p1 section{
-    padding-left: 7%;
-}
-
 .p1 section,
 .p2 section {
+    padding-top: 5px;
     display: flex;
     flex-direction: column;
+    align-items: start;
     justify-content: left;
+    padding-left: 7%;
+    gap: 10px;
 }
 
 .p1 section span,
 .p2 section span {
     font-weight: bold;
-    margin-bottom: 5px;
 }
 
 .p2 section textarea {
-    width: 85%;
+    width: 80%;
     height: 60px;
     border: none;
     outline: none;
@@ -596,8 +578,7 @@ nav .container_nav_button a {
     background-color: #1b014d;
     border-radius: 20px;
     font-family: FuenteNVS;
-    resize: none;
-    margin-bottom: 25px; 
+    resize: none; 
 }
 
 .p2 section textarea::placeholder {
@@ -611,12 +592,11 @@ nav .container_nav_button a {
 .cont-footer-cont ul {
     margin-top: 10px;
     list-style: none;
-    padding-left: 0;
 }
 
 .p3 {
     display: flex;
-    align-items: left;
+    align-items: center;
     justify-content: center;
     height: 10%;
     width: 100%;

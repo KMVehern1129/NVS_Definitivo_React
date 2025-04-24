@@ -27,19 +27,20 @@ const Principal = () => {
   const [Play, setPlay] = useState<Producto | null>(null);
   const [BannerInicio, setBannerInicio] = useState<Producto | null>(null);
 
-useEffect(() => {
-  const xboxItem = responseFilter.find(item => item.nombreProducto === "Xbox Series X");
-  const nintendoItem = responseFilter.find(item => item.nombreProducto === "Nintendo Switch");
-  const playItem = responseFilter.find(item => item.nombreProducto === "PlayStation 5");
-  const BannerInicioF = responseFilter.find(item => item.nombreProducto === "Marvel’s Spider-Man: Miles Morales");
+  useEffect(() => {
+    const xboxItem = responseFilter.find(item => item.nombreProducto === "Xbox Series X");
+    const nintendoItem = responseFilter.find(item => item.nombreProducto === "Nintendo Switch");
+    const playItem = responseFilter.find(item => item.nombreProducto === "PlayStation 5");
+    const BannerInicioF = responseFilter.find(item => item.nombreProducto === "Marvel’s Spider-Man: Miles Morales");
 
-  if (xboxItem) setXbox(xboxItem);
-  if (nintendoItem) setNin(nintendoItem);
-  if (playItem) setPlay(playItem);
-  if (BannerInicioF) setBannerInicio(BannerInicioF);
-}, [responseFilter]);
+    if (xboxItem) setXbox(xboxItem);
+    if (nintendoItem) setNin(nintendoItem);
+    if (playItem) setPlay(playItem);
+    if (BannerInicioF) setBannerInicio(BannerInicioF);
+  }, [responseFilter]);
+  
   return (
-    <div className="container_Principal">
+    <div className="containerP">
       <section className="container_banners">
         <figure className="A1" style={{ gridArea: "A1" }}>
           <div className="cont-left">
