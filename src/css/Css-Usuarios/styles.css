@@ -386,10 +386,15 @@ main section#Dos form input {
   color: white;
   font-family: "Opens-Sans", sans-serif;
   font-size: 15px;
+  border: 2px solid transparent;
+  background-image: linear-gradient(#522d9f, #522d9f), /* fondo del input */
+                    linear-gradient(to right, rgb(128, 0, 128), aqua); /* borde degradado */
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }
 
 main section#Dos form .Datos_Adicionales {
-  height: 80px;
+  height: 55px;
   text-align: left;
 
 }
