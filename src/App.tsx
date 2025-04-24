@@ -17,7 +17,7 @@ import Tienda_Play from "@pages/tiendaPlay";
 import Tienda_Xbox from "@pages/tiendaXbox";
 import Calificacion_Cli_Pro from "@pages/Calificacion_prod_cli";
 import Login from './Form/Login'; 
-import RecuperarContrasena from "./Form/RecuperarContrasena";
+import RecuperarContrasena from "./Form/recuperarContrasena";
 import VistaUsuarioCorreo from "@pages/Vista_Controlador_Usuario";
 import Correo from "@components/Controlador_Usuario B/Correo";
 import Contrasena from "@components/Controlador_Usuario B/Contrasena";
@@ -45,6 +45,7 @@ function App() {
           </Route>
         </Route>
       <Route path="/RecuperarContrasena" element={<RecuperarContrasena />} />
+      <Route path="/inicio" element={<Principal />} />
       <Route path="/Login" element={<Login />} />
       <Route path="/Administrador/Calificaciones/" element={<Calificacion_Cli_Pro />}></Route>
       <Route path="*" element={<h1>Not found</h1>} />
