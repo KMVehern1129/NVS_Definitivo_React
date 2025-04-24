@@ -18,6 +18,7 @@ import Tienda_Xbox from "@pages/tiendaXbox";
 import Calificacion_Cli_Pro from "@pages/Calificacion_prod_cli";
 import Login from './Form/Login'; 
 import RecuperarContrasena from "./Form/recuperarContrasena";
+import Registrar from "./Form/Registrar";
 import VistaUsuarioCorreo from "@pages/Vista_Controlador_Usuario";
 import Correo from "@components/Controlador_Usuario B/Correo";
 import Contrasena from "@components/Controlador_Usuario B/Contrasena";
@@ -44,6 +45,7 @@ function App() {
           <Route path="/Usuario/Nombre" element={<Nombre />}/>
           </Route>
         </Route>
+      <Route path="/Registrar" element={<Registrar />} />
       <Route path="/RecuperarContrasena" element={<RecuperarContrasena />} />
       <Route path="/inicio" element={<Principal />} />
       <Route path="/Login" element={<Login />} />
