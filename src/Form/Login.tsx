@@ -5,7 +5,6 @@ import { Container, LeftSection, Container_Form, Input } from "../elements/formE
 import { ContainerInputs, Boton } from "../elements/loginElements";
 import Logo from "../components/forms/comun/Logo";
 import { useNavigate } from "react-router-dom";
-import RecuperarContrasena from "./RecuperarContrasena";
 
 const Login = () => {
     const [email, setEmail] = useState("");
