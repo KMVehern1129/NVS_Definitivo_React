@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import { useState } from 'react';
-=======
->>>>>>> 34ba2fbb399ad50e1eb927f0e363017d12e3067a
 import {
     Container,
     LeftSection,
