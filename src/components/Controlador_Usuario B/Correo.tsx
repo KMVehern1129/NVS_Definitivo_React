@@ -1,4 +1,5 @@
-const Form = () => (
+const Correo = () => {
+    return(
     <section id="Dos">
         <h2><b>Cambiar e-mail</b></h2>
         <form id="Formulario" method="post" action="Index_Vista_Usuario_Correo.html">
@@ -11,6 +12,7 @@ const Form = () => (
             <button type="submit" value="submitValue" className="Btn_Aceptar_Form">Enviar</button>
         </form>
     </section>
-);
+    )
+};
 
-export default Form;
+export default Correo;
