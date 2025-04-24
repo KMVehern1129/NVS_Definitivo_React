@@ -121,7 +121,7 @@ main {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: 130vh;
 }
 
 main .header-main {
@@ -131,26 +131,42 @@ main .header-main {
   background-color: #ffffff56;
   width: 100%;
   padding: 0;
-  height: 30vh;
+  height: 40vh;
 }
 
+.Imagen_Usuario{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-left: -10;
+}
+
+.Imagen_Usuario img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-left: -60%;
+}
 
 .header-main section .Datos_Conjuntos_Img_Usuario {
   display: flex;
-  background-color: darkgreen;
   flex-direction: column;
-  gap: 1em;
-  height: 100%;
   font-family: FuenteNVS2;
+  margin-top: -40%;
 }
+
 
 main .header-main section {
   display: flex;
-  margin-left: 13%;
+  margin-left: 30%;
   line-height: 0.7;
   font-family: "Open Sans", sans-serif;
-  background-color: coral;
-}
+  margin-right: -30%;
+} 
 
 main .header-main section h1 {
   font-size: 40px;
@@ -273,6 +289,7 @@ main .Centro #Abrir_Pop_Up img {
 
 main .Container_Main {
   display: flex;
+  height: 100%;
 }
 
 section#Uno {
@@ -281,21 +298,22 @@ section#Uno {
 
 main section#Uno .Menu_Usuario {
   background-color: #3b1586;
-  width: 65%;
-  height: 235px;
+  width: 60%;
+  height: 230px;
   display: flex;
   border-radius: 10px;
-  margin-left: 33%;
+  margin-left: 30%;
+  margin-top: -10%;
 }
 
 main section#Uno .Menu_Usuario .Imagenes_Menu_Usuario {
   width: 40px;
-  margin-top: 5px;
+  margin-top: 3px;
 }
 
 main section#Uno .Menu_Usuario .Imagenes_Menu_Usuario img {
   width: 40px;
-  margin-top: 10px;
+  margin-top: 14px;
   margin-left: 20px;
 }
 
@@ -309,10 +327,11 @@ main .Menu_Usuario ul li a {
 
   color: white;
   text-decoration: none;
-  word-spacing: 5px;
+  word-spacing: 3px;
   font-size: large;
   line-height: 3;
   font-family: "League Spartan", sans-serif;
+  
 }
 
 main .Menu_Usuario ul li a:hover {
@@ -332,31 +351,33 @@ main .Menu_Usuario .Flechas_Menu_Usuario {
 }
 
 main .Menu_Usuario .Flechas_Menu_Usuario img {
-  width: 25px;
-  height: 25px;
+  width: 24px;
+  height: 24px;
   margin-top: 18px;
   margin-bottom: 9px;
-
+  margin-left: -50px;
 }
 
 main section#Dos h2 {
   font-family: "Open-Sans", sans-serif;
-  margin: -5px;
-  margin-left: 9%;
+  margin: -7px;
+  margin-left: 10%;
+  margin-bottom: 20%;
 }
 
 main section#Dos form {
   display: flex;
   flex-direction: column;
   margin-left: 16%;
-  margin-top: 12px;
+  margin-top: 4px; 
+  margin-bottom: 15%;
 }
 
 main section#Dos form input {
 
   width: 300px;
   height: 40px;
-  margin-top: 3px;
+  margin-top: 5px;
   margin-bottom: 3px;
   background-color: #522d9f;
   border-color: #522d9f;
@@ -381,7 +402,6 @@ main section#Dos form .Btn_Aceptar_Form {
   border-radius: 10px;
   width: 250px;
   height: 40px;
-  margin-left: 30px;
   border: 0;
   cursor: pointer;
   width: 100%;
@@ -392,245 +412,212 @@ main section#Dos form .Btn_Aceptar_Form:hover {
   background-color: #027eac;
 }
 
-@media (max-width: 1540px) {
 
-  header nav ul {
-    width: 100%;
-    margin-top: 5px;
-    margin-left: 0.2em;
+@media (max-width: 1540px){
+    
+  header nav ul{
+      width: 100%;
+      margin-top: 5px;
+      margin-left: 0.2em;
   }
-
   main section#Uno .Menu_Usuario {
-    width: 65%;
-    font-size: 16px;
+      width: 65%;
+      font-size: 16px;
   }
-
   main section#Dos {
-    margin-left: 5%;
+      margin-left: 5%;
   }
 }
-
-@media (max-width: 1050px) {
+@media (max-width: 1050px){
   header nav {
-    margin-left: 6%;
+      margin-left: 6%;
   }
-
-  header nav .Imagen_Logotipo_NVS img {
-    margin-left: 17px;
-    margin-top: 5px;
-    padding: 0;
+  header nav .Imagen_Logotipo_NVS img{
+      margin-left: 17px;
+      margin-top: 5px;
+      padding: 0;
 
   }
-
   main section#Uno .Menu_Usuario {
-    width: 85%;
-    font-size: 10px;
-    margin-left: 20%;
+      width: 85%;
+      font-size: 10px;
+      margin-left: 20%;
 
   }
-
   main section#Dos {
-    margin-left: 5%;
+      margin-left: 5%;
   }
 
 }
 
 @media (max-width: 828px) {
   header nav {
-    width: 47%;
-    margin-left: 8%;
-    height: 70px;
+      width: 47%;
+      margin-left: 8%;
+      height: 70px;
   }
-
-  header nav .Imagen_Logotipo_NVS img {
-    margin-left: 15px;
-    margin-top: 13px;
+  header nav .Imagen_Logotipo_NVS img{
+      margin-left: 15px;
+      margin-top: 13px;
 
   }
-
+  
   header nav ul {
-    flex-direction: column;
-    align-items: center;
+      flex-direction: column;
+      align-items: center;
   }
 
   header nav ul li {
-    margin: 0;
-    margin-bottom: 10px;
-    margin-right: 25px;
-    margin-left: -17px;
+      margin: 0;
+      margin-bottom: 10px;
+      margin-right: 25px;
+      margin-left: -17px;
   }
 
   header .Btns-Usu_Carrito_Buscar {
-    align-items: center;
+      align-items: center;
   }
 
   header .Btns-Usu_Carrito_Buscar a {
-    height: 50px;
-    width: 45px;
-    margin-left: 0;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    border-radius: 180px;
+      height: 50px;
+      width: 45px;
+      margin-left: 0;
+      margin-bottom: 10px;
+      margin-left: 10px;
+      border-radius: 180px;
   }
-
   header .Btns-Usu_Carrito_Buscar img {
-    height: 35px;
-    width: 35px;
-    margin-top: 7px;
-    margin-left: 4px;
+      height: 35px;
+      width: 35px;
+      margin-top: 7px;
+      margin-left: 4px;
+  }
+  header section{
+      margin-left: 4%;
   }
 
-  header section {
-    margin-left: 4%;
+  main .Container_Main{
+      display: flex;
+      flex-direction: column;
   }
-
-  main .Container_Main {
-    display: flex;
-    flex-direction: column;
-  }
-
   main section#Uno .Menu_Usuario {
-    width: 140%;
-    font-size: 10px;
-    margin-left: 40%;
+      width: 140%;
+      font-size: 10px;
+      margin-left: 40%;
   }
-
   main section#Uno .Menu_Usuario .Imagenes_Menu_Usuario {
-    flex-wrap: wrap;
-    justify-content: center;
+      flex-wrap: wrap;
+      justify-content: center;
   }
-
-  main section#Uno ul {
-    width: 70%;
+  main section#Uno ul{
+      width: 70%;
   }
-
-  main .Menu_Usuario .Flechas_Menu_Usuario {
-    padding: 0px 12px;
+  main .Menu_Usuario .Flechas_Menu_Usuario{
+      padding: 0px 12px;
   }
-
   main section#Dos {
-    margin-top: 25px;
-    width: 40%;
-    margin-left: 22.5%;
+      margin-top: 25px;
+      width: 40%;
+      margin-left: 22.5%;
   }
-
   main section#Dos form input {
-    width: 130%;
-    margin-bottom: 15px;
+      width: 130%;
+      margin-bottom: 15px;
   }
-
-  main section#Dos form .Btn_Aceptar_Form {
-    margin-left: 15%;
+  main section#Dos form .Btn_Aceptar_Form{
+      margin-left: 15%;
   }
-
+  
 }
-
 @media (max-width: 717px) {
-  header nav {
-    margin-left: 3%;
-    width: 55%;
+  header nav{
+      margin-left: 3%;
+      width: 55%;
   }
 }
-
 @media (max-width: 635px) {
-  header nav {
-    margin-left: 2%;
-
+  header nav{
+      margin-left: 2%;
+      
   }
-
-  header nav ul {
-    margin-top: 3.5px;
+  header nav ul{
+      margin-top: 3.5px;
   }
 }
 
 @media (max-width: 480px) {
-  header .Nav_Btns {
-    display: flex;
-    flex-direction: column;
-    width: 160%;
+  header .Nav_Btns{
+      display: flex;
+      flex-direction: column;
+      width: 160%;
   }
-
   header .Menu_Principal {
-    height: 100%;
-    width: 160%;
-
+      height: 100%;
+      width: 160%;
+  
   }
-
-  header nav ul {
-    width: 100%;
-    margin-top: 15px;
-    margin-left: 0.2em;
+  header nav ul{
+      width: 100%;
+      margin-top: 15px;
+      margin-left: 0.2em;
   }
-
-  header .Btns-Usu_Carrito_Buscar {
-    margin: 0;
+  header .Btns-Usu_Carrito_Buscar{
+      margin: 0;
   }
-
   header .Btns-Usu_Carrito_Buscar a {
-    padding: 7px 10px;
-    margin-top: 0.7em;
-    margin-left: 7%;
+      padding: 7px 10px;
+      margin-top: 0.7em;
+      margin-left: 7%;
   }
-
-  header section {
-    margin: 0;
+  header section{
+      margin: 0;
   }
-
   header section h1 {
-    font-size: 30px;
-    margin-top: -10px;
+      font-size: 30px;
+      margin-top: -10px;
   }
 
-
+  
 
   hr {
-    width: 90%;
+      width: 90%;
   }
-
-  main .Centro {
-    margin-left: 11%;
+  main .Centro{
+      margin-left: 11%;
   }
-
-  main .Text_Center h2 {
-    line-height: 1.1;
+   main .Text_Center h2{
+      line-height: 1.1;
   }
-
   main section#Uno .Menu_Usuario .Imagenes_Menu_Usuario img {
-    width: 30px;
-    margin-left: 10px;
-    margin-bottom: 10px;
+      width: 30px;
+      margin-left: 10px;
+      margin-bottom: 10px;
   }
-
-  main .Menu_Usuario ul {
-    padding: 0;
-    margin-top: 0;
-    margin-left: 1px;
+  main .Menu_Usuario ul{
+      padding: 0;
+      margin-top: 0;
+      margin-left: 1px;
   }
 
   main section#Uno .Menu_Usuario .Flechas_Menu_Usuario img {
-    width: 20px;
+      width: 20px;
   }
-
-  main section#Dos {
-    margin-left: 22%;
+  main section#Dos{
+      margin-left: 22%;
   }
-
-  main section#Dos h2 {
-    margin-left: 10%;
-    width: 140%;
+  main section#Dos h2{
+      margin-left: 10%;
+      width: 140%;
   }
-
-  main section#Dos form {
-    margin: 0;
-    margin-top: 15px;
+  main section#Dos form{
+      margin: 0;
+      margin-top: 15px;
   }
-
   main section#Dos form input {
-    width: 140%;
-    margin-bottom: 15px;
+      width: 140%;
+      margin-bottom: 15px;
   }
-
-  main section#Dos form .Btn_Aceptar_Form {
-    margin-left: 20%;
+  main section#Dos form .Btn_Aceptar_Form{
+      margin-left: 20%;
   }
 }
