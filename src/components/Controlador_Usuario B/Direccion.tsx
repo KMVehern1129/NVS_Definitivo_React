@@ -20,7 +20,7 @@ const Direccion = () => {
             });
             return;
         }
-
+x
         if (direccion.trim() === "") {
             Swal.fire({
                 icon: "error",

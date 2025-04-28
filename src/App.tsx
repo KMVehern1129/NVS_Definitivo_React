@@ -5,7 +5,7 @@ import Nav from "@components/nav";
 
 //contexts
 import { ApiProducto } from "@contexts/productContext";
-import { ApiCarrito } from "@contexts/carritoContext";
+
 //css
 import '@css/principal/index.css';
 
@@ -42,18 +42,19 @@ function App() {
           <Route path="/TiendaPlayStation" element={<Tienda_Play />} />
           <Route path="/TiendaXbox" element={<Tienda_Xbox />} />
           <Route path="/detallesVideojuego" element={<DetallesVideojuego />} />
+          <Route path="/Usuario" element={<VistaUsuarioCorreo />} >
+            <Route path="/Usuario/Correo" element={<Correo />} />
+            <Route path="/Usuario/Nombre" element={<Nombre />} />
+            <Route path="/Usuario/Direccion" element={<Direccion />} />
+            <Route path="/Usuario/Contraseña" element={<Contrasena />} />
+          </Route>
         </Route>
         <Route path="*" element={<h1>Not found</h1>} />
-        <Route path="/RecuperarContrasena" element={<RecuperarContrasena />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Administrador/Calificaciones/" element={<Calificacion_Cli_Pro />}></Route>
-        <Route path="*" element={<h1>Not found</h1>} />
         <Route path="/Registrar" element={<Registrar />} />
         <Route path="/RecuperarContrasena" element={<RecuperarContrasena />} />
-        <Route path="/inicio" element={<Principal />} />
-        <Route path="/Login" element={<Login />} />
-        <Route path="/Administrador/Calificaciones/" element={<Calificacion_Cli_Pro />}></Route>
-        <Route path="*" element={<h1>Not found</h1>} />
+
       </Routes>
     </ApiProducto>
   )

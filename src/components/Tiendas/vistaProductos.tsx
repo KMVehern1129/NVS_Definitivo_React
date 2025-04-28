@@ -99,34 +99,34 @@ const Vista_Productos = ({ tienda }: Props) => {
                 break;
             }
         }
-    }, [responseFilter]);
+    },[]);
 
     const SeleccionarTienda = (nombre: string, tienda: string) => {
         switch (tienda) {
-            case "Inicio":
+            case "Inicio":{
                 const key = `/src/assets/imgs/img/imagenesMain/imgCards/${nombre}.png`;
                 const img = imagenes[key] as { default: string } | undefined;
-                return img?.default || (imagenes['/src/assets/imgs/img/imagenesMain/imgCards/default.png'] as { default: string }).default;
+                return img?.default || (imagenes['/src/assets/imgs/img/imagenesMain/imgCards/default.png'] as { default: string }).default;}
             case "Videojuegos":
-                const keyV = `/src/assets/imgs/img/videojuegos/imgCards/${nombre}.png`;
+                {const keyV = `/src/assets/imgs/img/videojuegos/imgCards/${nombre}.png`;
                 const imgV = imagenes[keyV] as { default: string } | undefined;
-                return imgV?.default || (imagenes['/src/assets/imgs/img/videojuegos/imgCards/default.png'] as { default: string }).default;
+                return imgV?.default || (imagenes['/src/assets/imgs/img/videojuegos/imgCards/default.png'] as { default: string }).default;}
             case "Consolas":
-                const keyC = `/src/assets/imgs/img/consolas img/${nombre}.png`;
+                {const keyC = `/src/assets/imgs/img/consolas img/${nombre}.png`;
                 const imgC = imagenes[keyC] as { default: string } | undefined;
-                return imgC?.default || (imagenes['/src/assets/imgs/img/consolas img/default.png'] as { default: string }).default;
+                return imgC?.default || (imagenes['/src/assets/imgs/img/consolas img/default.png'] as { default: string }).default;}
             case "Nintendo":
-                const keyN = `/src/assets/imgs/img/nintendo/imgCards/${nombre}.png`;
+                {const keyN = `/src/assets/imgs/img/nintendo/imgCards/${nombre}.png`;
                 const imgN = imagenes[keyN] as { default: string } | undefined;
-                return imgN?.default || (imagenes['/src/assets/imgs/img/nintendo/imgCards/default.png'] as { default: string }).default;
+                return imgN?.default || (imagenes['/src/assets/imgs/img/nintendo/imgCards/default.png'] as { default: string }).default;}
             case "PlayStation":
-                const keyP = `/src/assets/imgs/img/playstation/imgCards/${nombre}.png`;
+                {const keyP = `/src/assets/imgs/img/playstation/imgCards/${nombre}.png`;
                 const imgP = imagenes[keyP] as { default: string } | undefined;
-                return imgP?.default || (imagenes['/src/assets/imgs/img/playstation/imgCards/default.png'] as { default: string }).default;
+                return imgP?.default || (imagenes['/src/assets/imgs/img/playstation/imgCards/default.png'] as { default: string }).default;}
             case "Xbox":
-                const keyX = `/src/assets/imgs/img/xbox/imgCards/${nombre}.png`;
+                {const keyX = `/src/assets/imgs/img/xbox/imgCards/${nombre}.png`;
                 const imgX = imagenes[keyX] as { default: string } | undefined;
-                return imgX?.default || (imagenes['/src/assets/imgs/img/xbox/imgCards/default.png'] as { default: string }).default;
+                return imgX?.default || (imagenes['/src/assets/imgs/img/xbox/imgCards/default.png'] as { default: string }).default;}
         }
     };
 

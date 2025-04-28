@@ -20,7 +20,7 @@ const Tienda_Inicio = ({ Banner }: TiendaInicioProps) => {
             <header>
                 <figure>
                     <img src={imageBanner} alt="" width="100%" />
-                    <div className="text_img_banner">
+                    <div className="text-img-banner">
                         {Banner && (
                             <span>{Banner.nombreProducto}
                             </span>

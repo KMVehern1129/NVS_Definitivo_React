@@ -21,7 +21,7 @@ const LoginForm = () => {
 
             if (response.data.success) {
                 console.log("Login exitoso:", response.data);
-                navigate("/index");
+                navigate("/Usuario");
             } else {
                 setError(response.data.message || "Credenciales incorrectas");
             }

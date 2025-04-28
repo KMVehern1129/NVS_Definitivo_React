@@ -156,16 +156,13 @@ main .header-main {
   display: flex;
   flex-direction: column;
   font-family: FuenteNVS2;
-  margin-top: -40%;
 }
 
 
 main .header-main section {
   display: flex;
-  margin-left: 30%;
   line-height: 0.7;
   font-family: "Open Sans", sans-serif;
-  margin-right: -30%;
 } 
 
 main .header-main section h1 {
@@ -361,16 +358,15 @@ main .Menu_Usuario .Flechas_Menu_Usuario img {
 main section#Dos h2 {
   font-family: "Open-Sans", sans-serif;
   margin: -7px;
-  margin-left: 10%;
   margin-bottom: 20%;
 }
 
 main section#Dos form {
   display: flex;
   flex-direction: column;
-  margin-left: 16%;
+  margin-left: 2%;
   margin-top: 4px; 
-  margin-bottom: 15%;
+  margin-bottom: 14%;
 }
 
 main section#Dos form input {
@@ -448,9 +444,6 @@ main section#Dos form .Btn_Aceptar_Form:hover {
       font-size: 10px;
       margin-left: 20%;
 
-  }
-  main section#Dos {
-      margin-left: 5%;
   }
 
 }
